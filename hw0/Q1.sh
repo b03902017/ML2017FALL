@@ -1,1 +1,1 @@
-python3.6 Q1.py $1
+python3 Q1.py $1

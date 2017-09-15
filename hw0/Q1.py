@@ -8,9 +8,11 @@ with open(sys.argv[1]) as f:
         else:
             words[word] = 1
             words_order.append(word)
-with open('Q1.txt', 'a') as f:
+with open('Q1.txt', 'w') as f:
     for index, word in enumerate(words_order):
         if index < len(words_order)-1:
-            f.write(f'{word} {index} {words[word]}\n')
+            f.write('{word} {index} {fre}\n'\
+                .format(word=word,index=index,fre=words[word]))
         else:
-            f.write(f'{word} {index} {words[word]}')
+            f.write('{word} {index} {fre}'\
+                .format(word=word,index=index,fre=words[word]))
